@@ -27,8 +27,14 @@ public class Fees {
 		this.amountPaid = amountPaid;
 
 	}
-	
-	
+
+	public Fees(int courseId2, int studentId2, double amountPaid, double courseFees) {
+		this.courseId = courseId2;
+		this.studentId = studentId2;
+		this.amountPaid = amountPaid;
+		this.amountPending = courseFees;
+		
+	}
 
 	public int getFeeId() {
 		return feeId;
@@ -57,4 +63,12 @@ public class Fees {
 	public String getStudentName() {
 		return studentName;
 	}
+
+	@Override
+	public String toString() {
+		return "Fees [feeId=" + feeId + ", courseId=" + courseId + ", studentId=" + studentId + ", amountPaid="
+				+ amountPaid + ", amountPending=" + amountPending + ", courseName=" + courseName + ", studentName="
+				+ studentName + "]";
+	}
+	
 }
