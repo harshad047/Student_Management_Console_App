@@ -37,4 +37,13 @@ public class StudentService {
 	public Student deleteStudentById(int student_id) {
 		return studentDao.deleteStudentByID(student_id);
 	}
+
+	public Object payStudentFees(int id) {
+		return studentDao.payStudentFees(id);
+		
+	}
+
+	public boolean restoreStudent(int studentId) {
+		return studentDao.restoreStudent(studentId);
+	}
 }
